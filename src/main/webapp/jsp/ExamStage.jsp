@@ -56,8 +56,6 @@
         <div class="container" style="height: 200px; padding-top: 50px">
             <h1>起步</h1>
             <p>千锋考试管理系统</p>
-            <button name="examId" value=${requestScope.examId}>${sessionScope.examId}</button>
-            <button name="stage" value=${requestScope.examId}>${sessionScope.stage}</button>
         </div>
 
 
@@ -114,106 +112,23 @@
 </div>
 
 
+
+
 <div style="float: left; margin-right: 50px;">
-    <h2>题型分析</h2>
-    <div style="margin-top: 140px; width: 100px;margin-left: 280px;">
-        <form action="/queryCallLogList" method="get">
-            <button type="submit" class="btn btn-default" style="border:4px #9999FF dashed;background:lightblue;height:50px;width:130px;margin-top: 50px; margin-left: 400px;">单选题分析</button>
+    <form action="/exam" method="get">
+        <div class="input-group input-group-lg" style="margin-top: 200px; width: 300px;margin-left: 300px;">
+            <span class="input-group-addon" id="sizing-addon1">考试id</span>
+            <input type="text" class="form-control" name="examId"   placeholder="考试id" aria-describedby="sizing-addon1">
+        </div>
+        <div class="input-group input-group-lg" style="margin-top: 50px; width: 300px;margin-left: 300px;">
+            <span class="input-group-addon" id="sizing-addon2">阶段</span>
+            <input type="text" class="form-control" name="stage" placeholder="阶段" aria-describedby="sizing-addon1">
+        </div>
 
-        </form>
-    </div>
+        <button type="submit" class="btn btn-default" style="height:50px;width:80px;margin-top: 50px; margin-left: 400px;">查询</button>
 
-
-    <div style="margin-top: 0px; width: 100px;margin-left: 280px;">
-        <form action="/program" method="get">
-            <button type="submit" class="btn btn-default" style="border:4px #9999FF dashed;background:lightblue;height:50px;width:150px;margin-top: 50px; margin-left: 400px;">编程题分析</button>
-        </form>
-    </div>
-
-    <div style="margin-top: 0px; width: 100px;margin-left: 280px;">
-        <form action="/program" method="get">
-            <button type="submit" class="btn btn-default" style="border:4px #9999FF dashed;background:lightblue;height:50px;width:130px;margin-top: 50px; margin-left: 400px;">查询</button>
-        </form>
-    </div>
-
-    <div style="margin-top: 0px; width: 100px;margin-left: 280px;">
-        <form action="/program" method="get">
-            <button type="submit" class="btn btn-default" style="border:4px #9999FF dashed;background:lightblue;height:50px;width:130px;margin-top: 50px; margin-left: 400px;">查询</button>
-        </form>
-    </div>
-
-    <div style="margin-top: -400px; width: 100px;margin-left: 50px;">
-        <form action="/program" method="get">
-            <button type="submit" class="btn btn-default" style="border:4px #9999FF dashed;background:lightblue;height:50px;width:130px;margin-top: 50px; margin-left: 400px;">查询</button>
-        </form>
-    </div>
-
-    <div style="margin-top: 0px; width: 100px;margin-left: 50px;">
-        <form action="/program" method="get">
-            <button type="submit" class="btn btn-default" style="border:4px #9999FF dashed;background:lightblue;height:50px;width:130px;margin-top: 50px; margin-left: 400px;">查询</button>
-        </form>
-    </div>
-
-    <div style="margin-top: 0px; width: 100px;margin-left: 50px;">
-        <form action="/program" method="get">
-            <button type="submit" class="btn btn-default" style="border:4px #9999FF dashed;background:lightblue;height:50px;width:130px;margin-top: 50px; margin-left: 400px;">查询</button>
-        </form>
-    </div>
-    <div style="margin-top: 0px; width: 100px;margin-left: 50px;">
-        <form action="/program" method="get">
-            <button type="submit" class="btn btn-default" style="border:4px #9999FF dashed;background:lightblue;height:50px;width:130px;margin-top: 50px; margin-left: 400px;">查询</button>
-        </form>
-    </div>
-
-
-
-
-
-    <div style="margin-top: -400px; width: 100px;margin-left: -180px;">
-        <form action="/queryCallLogList" method="get">
-            <button type="submit" class="btn btn-default" style="border:4px #9999FF dashed;background:lightblue;height:50px;width:130px;margin-top: 50px; margin-left: 400px;">查询</button>
-        </form>
-    </div>
-
-    <div style="margin-top: 0px; width: 100px;margin-left: -180px;">
-        <form action="/queryCallLogList" method="get">
-            <button type="submit" class="btn btn-default" style="border:4px #9999FF dashed;background:lightblue;height:50px;width:130px;margin-top: 50px; margin-left: 400px;">查询</button>
-        </form>
-    </div>
-
-    <div style="margin-top: 0px; width: 100px;margin-left: -180px;">
-        <form action="/queryCallLogList" method="get">
-            <button type="submit" class="btn btn-default" style="border:4px #9999FF dashed;background:lightblue;height:50px;width:130px;margin-top: 50px; margin-left: 400px;">查询</button>
-        </form>
-    </div>
-
-    <div style="margin-top: 0px; width: 100px;margin-left: -180px;">
-        <form action="/queryCallLogList" method="get">
-            <button type="submit" class="btn btn-default" style="border:4px #9999FF dashed;background:lightblue;height:50px;width:130px;margin-top: 50px; margin-left: 400px;">查询</button>
-        </form>
-    </div>
-
-
+    </form>
 </div>
-
-
-
-
-<%--<div style="float: left; margin-right: 50px;">--%>
-    <%--<form action="/exam" method="get">--%>
-        <%--<div class="input-group input-group-lg" style="margin-top: 200px; width: 300px;margin-left: 300px;">--%>
-            <%--<span class="input-group-addon" id="sizing-addon1">考试id</span>--%>
-            <%--<input type="text" class="form-control" name="telephone"  value=${requestScope.telephone} placeholder="手机号" aria-describedby="sizing-addon1">--%>
-        <%--</div>--%>
-        <%--<div class="input-group input-group-lg" style="margin-top: 50px; width: 300px;margin-left: 300px;">--%>
-            <%--<span class="input-group-addon" id="sizing-addon2">阶段</span>--%>
-            <%--<input type="text" class="form-control" name="year" placeholder="如 2018" aria-describedby="sizing-addon1">--%>
-        <%--</div>--%>
-
-        <%--<button type="submit" class="btn btn-default" style="height:50px;width:80px;margin-top: 50px; margin-left: 400px;">查询</button>--%>
-
-    <%--</form>--%>
-<%--</div>--%>
 
 
 

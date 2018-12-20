@@ -22,7 +22,7 @@ public class CallLogHandlerMonth {
         //以下展示用户每月的通话时长与通话次数   用户输入 2018 -1 -1
          if(queryInfo.getMonth().equals("-1") && queryInfo.getDay().equals("-1")) {
 
-            HashMap<String, String> hashMap = new HashMap<>();
+            HashMap<String, String> hashMap = new HashMap<String,String>();
             hashMap.put("telephone", queryInfo.getTelephone());
             hashMap.put("year", queryInfo.getYear());
             hashMap.put("month", queryInfo.getMonth());
@@ -56,7 +56,7 @@ public class CallLogHandlerMonth {
             return "jsp/CallLogListMonth";
 
       }else {
-           HashMap<String, String> hashMap2 = new HashMap<>();
+           HashMap<String, String> hashMap2 = new HashMap<String,String>();
            hashMap2.put("telephone", queryInfo.getTelephone());
            hashMap2.put("year", queryInfo.getYear());
            hashMap2.put("month", queryInfo.getMonth());
