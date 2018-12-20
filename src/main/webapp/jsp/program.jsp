@@ -38,7 +38,7 @@
         var stunum1 = []
         var getscore = []
         var ss = []
-        /*alert("${sessionScope.programstagesurebase}")*/
+
         <c:forEach items="${sessionScope.programstagesurebase}" var="item" varStatus="status" >
         <%--alert("${item}")--%>
         stunum1.push("${item.stunum}")
@@ -118,29 +118,77 @@
         <%--<button onclick="program"> </button>--%>
     <%--</div>--%>
 
-    <div class="btn-group btn-group-justified" role="group" aria-label="...">
-        <div class="btn-group" role="group" >
-            <button onclick="program()" type="button" class="btn btn-default" style="background-color: #17a2b8;">编程答题记录详</button>
-        </div>
-        <div onclick="program1()" class="btn-group" role="group" >
-            <button type="button" class="btn btn-default">个人单次各阶段总正确率基础分析</button>
-        </div>
-        <div class="btn-group" role="group">
-            <button type="button" class="btn btn-default" onclick="program2()">个人单次考试各阶段难易度正确率基础分析</button>
-        </div>
+    <div style="align-content: center;margin-left: 300px" class="center-block">
+
+        <table class="center-block">
+            <tr class="center-block">
+                <td>
+                    <button  style="align-content: center" type="button" class="btn btn-primary"
+                             data-toggle="button" onclick="program()"> 编程答题记录详请
+                    </button>
+                </td>
+                <td width="50px" height="50px"> </td>
+                <td>
+                    <button  style="align-content: center" type="button" class="btn btn-primary"
+                             data-toggle="button" onclick="program1()"> 个人单次各阶段总正确率基础分析
+                    </button>
+                </td>
+                <td width="50px" height="50px"> </td>
+
+                <td>
+                    <button  style="align-content: center" type="button" class="btn btn-primary"
+                             data-toggle="button" onclick="program2()"> 个人单次考试各阶段难易度正确率基础分析
+                    </button>
+                </td>
+
+                <td width="50px" height="50px"> </td>
+
+                <td>
+                    <button  style="align-content: center" type="button" class="btn btn-primary"
+                             data-toggle="button" onclick="program3()"> 个人单次考试各阶段难易度正确率表
+                    </button>
+                </td>
+
+                <td width="50px" height="50px"> </td>
+
+                <td>
+                    <button  style="align-content: center" type="button" class="btn btn-primary"
+                             data-toggle="button" onclick="program5()"> 个人单次考试各阶段总正确率表
+                    </button>
+                </td>
+
+            </tr>
+        </table>
     </div>
 
-    <div class="btn-group btn-group-justified" role="group" aria-label="...">
-        <%--<div class="btn-group" role="group">--%>
-            <%--<button onclick="pro" type="button" class="btn btn-default">编程答题记录详</button>--%>
+
+    <%--<div class="btn-group btn-group-justified" role="group" aria-label="...">--%>
+        <%--<div class="btn-group" role="group" >--%>
+            <%--<button onclick="program()" type="button" class="btn btn-default" style="background-color: #17a2b8;">编程答题记录详</button>--%>
         <%--</div>--%>
-        <div class="btn-group" role="group">
-            <button type="button" class="btn btn-default" onclick="program3()">个人单次考试各阶段难易度正确率表</button>
-        </div>
-        <div class="btn-group" role="group" >
-            <button type="button" class="btn btn-default" onclick="program5()">个人单次考试各阶段总正确率表</button>
-        </div>
-    </div>
+
+
+
+
+        <%--<div onclick="program1()" class="btn-group" role="group" >--%>
+            <%--<button type="button" class="btn btn-default">个人单次各阶段总正确率基础分析</button>--%>
+        <%--</div>--%>
+        <%--<div class="btn-group" role="group">--%>
+            <%--<button type="button" class="btn btn-default" onclick="program2()">个人单次考试各阶段难易度正确率基础分析</button>--%>
+        <%--</div>--%>
+    <%--</div>--%>
+
+    <%--<div class="btn-group btn-group-justified" role="group" aria-label="...">--%>
+        <%--&lt;%&ndash;<div class="btn-group" role="group">&ndash;%&gt;--%>
+            <%--&lt;%&ndash;<button onclick="pro" type="button" class="btn btn-default">编程答题记录详</button>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+        <%--<div class="btn-group" role="group">--%>
+            <%--<button type="button" class="btn btn-default" onclick="program3()">个人单次考试各阶段难易度正确率表</button>--%>
+        <%--</div>--%>
+        <%--<div class="btn-group" role="group" >--%>
+            <%--<button type="button" class="btn btn-default" onclick="program5()">个人单次考试各阶段总正确率表</button>--%>
+        <%--</div>--%>
+    <%--</div>--%>
 
 
 
@@ -148,7 +196,8 @@
 
 
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-    <div id="main" style="width: 1800px;height:800px; margin-top: 30px ;margin-left: 5px"></div>
+    <div class="center-block" id="main" style="width: 1800px;height:800px;
+     margin-top: 30px ;margin-left: 5px;border: 4px solid  #9fcdff ; margin-left: 50px"></div>
     <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
         var myChart = echarts.init(document.getElementById('main'));
